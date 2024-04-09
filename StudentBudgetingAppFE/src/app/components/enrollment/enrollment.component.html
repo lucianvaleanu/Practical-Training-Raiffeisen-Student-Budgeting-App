@@ -1,0 +1,358 @@
+<body>
+  <img src="../../../assets/Brand.png" alt="brand" id="brand-img" />
+
+  <div id="carouselEnrollment" class="carousel slide pointer-event">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <div
+          class="carousel-body bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+          aria-label="Placeholder: First slide"
+          focusable="false"
+        >
+          <div class="signup-container">
+            <div class="signup-content">
+              <h2 class="text-center">Create account</h2>
+              <form
+                [formGroup]="signupForm"
+                (ngSubmit)="onSubmit()"
+                class="signup-form"
+              >
+                <div class="form-group">
+                  <label for="email" class="form-label">Email:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    formControlName="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    [ngClass]="{
+                      'is-invalid':
+                        signupForm.get('email')?.invalid &&
+                        signupForm.get('email')?.touched
+                    }"
+                  />
+                  <div
+                    class="invalid-feedback"
+                    *ngIf="
+                      signupForm.get('email')?.invalid &&
+                      signupForm.get('email')?.touched
+                    "
+                  >
+                    <div
+                      *ngIf="signupForm.get('email')?.hasError('required')"
+                      class="invalid-feedback"
+                    >
+                      Email is required.
+                    </div>
+                    <div
+                      *ngIf="signupForm.get('email')?.hasError('email')"
+                      class="invalid-feedback"
+                    >
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="password" class="form-label">Password:</label>
+                  <input
+                    type="password"
+                    id="password"
+                    formControlName="password"
+                    class="form-control"
+                    placeholder="Enter your password"
+                    [ngClass]="{
+                      'is-invalid':
+                        signupForm.get('password')?.invalid &&
+                        signupForm.get('password')?.touched
+                    }"
+                  />
+                  <div
+                    class="invalid-feedback"
+                    *ngIf="
+                      signupForm.get('password')?.invalid &&
+                      signupForm.get('password')?.touched
+                    "
+                  >
+                    <div
+                      *ngIf="signupForm.get('password')?.hasError('required')"
+                      class="invalid-feedback"
+                    >
+                      Password is required.
+                    </div>
+                    <div
+                      *ngIf="signupForm.get('password')?.hasError('minlength')"
+                      class="invalid-feedback"
+                    >
+                      Password must be at least 8 characters long.
+                    </div>
+                  </div>
+                </div>
+                <!-- Additional fields -->
+                <div class="form-group">
+                  <label for="firstName" class="form-label">First Name:</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    formControlName="firstName"
+                    class="form-control"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="form-label">Last Name:</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    formControlName="lastName"
+                    class="form-control"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="dateOfBirth" class="form-label"
+                    >Date of Birth:</label
+                  >
+                  <input
+                    type="date"
+                    id="dateOfBirth"
+                    formControlName="dateOfBirth"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="address" class="form-label">Address:</label>
+                  <input
+                    type="text"
+                    id="address"
+                    formControlName="address"
+                    class="form-control"
+                    placeholder="Enter your address"
+                  />
+                </div>
+                <!-- End of additional fields -->
+                <div class="button-wrapper text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-warning"
+                    data-bs-target="#carouselEnrollment"
+                    data-bs-slide="next"
+                    [disabled]="signupForm.invalid"
+                  >
+                    Next
+                  </button>
+                  <div class="forgot-password">
+                    <a href="#" (click)="resetPassword()">Forgot password?</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselEnrollment"
+              data-bs-slide="next"
+              [hidden]="signupForm.invalid"
+              [disabled]="signupForm.invalid"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Alte elemente ale carouselului -->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="carousel-item">
+        <div class="carousel-body bd-placeholder-img bd-placeholder-img-lg d-block w-100" aria-label="Placeholder: Second slide" focusable="false">
+          <div class="signup-container">
+            <div class="signup-content">
+              <h2 class="text-center">Login</h2>
+              <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+                <div class="form-group">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" id="email" formControlName="email" class="form-control" placeholder="Enter your email" [ngClass]="{'is-invalid': signupForm.get('email')?.invalid && signupForm.get('email')?.touched }" />
+                  <div class="invalid-feedback" *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+                    <div *ngIf="signupForm.get('email')?.hasError('required')" class="invalid-feedback">
+                      Email is required.
+                    </div>
+                    <div *ngIf="signupForm.get('email')?.hasError('email')" class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="password" class="form-label">Password:</label>
+                  <input type="password" id="password" formControlName="password" class="form-control" placeholder="Enter your password" [ngClass]="{'is-invalid': signupForm.get('password')?.invalid && signupForm.get('password')?.touched }" />
+                  <div class="invalid-feedback" *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+                    <div *ngIf="signupForm.get('password')?.hasError('required')" class="invalid-feedback">
+                      Password is required.
+                    </div>
+                    <div *ngIf="signupForm.get('password')?.hasError('minlength')" class="invalid-feedback">
+                      Password must be at least 8 characters long.
+                    </div>
+                  </div>
+                </div>
+                <div class="button-wrapper text-center">
+                  <button type="submit" class="btn btn-warning" [disabled]="signupForm.invalid">Login</button>
+                  <div class="forgot-password">
+                    <a href="#" (click)="resetPassword()">Forgot password?</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEnrollment" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEnrollment" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="carousel-item">
+        <div class="carousel-body bd-placeholder-img bd-placeholder-img-lg d-block w-100" aria-label="Placeholder: Second slide" focusable="false">
+          <div class="content-container">
+            <div class="content">
+              <!-- Elementele specifice pentru acest container -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEnrollment" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEnrollment" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="carousel-item justify-content-center text-center active">
+        <div class="carousel-body bd-placeholder-img bd-placeholder-img-lg d-block w-100" aria-label="Placeholder: Second slide" focusable="false">
+          <div class="content-container">
+            <div class="content">
+                <h2>Hai să îți ținem bugetul sub control!</h2>
+
+                <img src="../../../assets/Happiness 1.png" class="img-fluid" alt="Happiness" id="happiness-img" />
+
+                <div>
+                 <p>Alege cum vrei să îți gestionezi finanțele</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEnrollment" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEnrollment" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</body>

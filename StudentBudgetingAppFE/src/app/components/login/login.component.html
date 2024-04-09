@@ -1,0 +1,109 @@
+<html>
+  <img src="../../../assets/Brand.png" alt="brand" id="brand-img" />
+  <div id="main" class="container-fluid">
+    <div class="row justify-content-center align-items-start">
+      <div class="col-md-8">
+        <div class="login-text text-center mb-4">
+          <h2>Bine ai venit la FunckyApp</h2>
+          <p>
+            Cea mai bună soluție digitală pentru studenții care doresc să-și
+            gestioneze banii cu încredere și să-și atingă obiectivele
+            financiare!
+          </p>
+        </div>
+      </div>
+      <div class="loginContiner col-md-4 order-md-2 order-1">
+        <h2 class="text-center">Login</h2>
+        <form
+          [formGroup]="loginForm"
+          (ngSubmit)="onSubmit()"
+          class="login-form"
+        >
+          <div class="form-group">
+            <label for="email" class="form-label">Email:</label>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              class="form-control"
+              placeholder="Enter your email"
+              [ngClass]="{
+                'is-invalid':
+                  loginForm.get('email')?.invalid &&
+                  loginForm.get('email')?.touched
+              }"
+            />
+            <div
+              class="invalid-feedback"
+              *ngIf="
+                loginForm.get('email')?.invalid &&
+                loginForm.get('email')?.touched
+              "
+            >
+              <div
+                *ngIf="loginForm.get('email')?.hasError('required')"
+                class="invalid-feedback"
+              >
+                Email is required.
+              </div>
+              <div
+                *ngIf="loginForm.get('email')?.hasError('email')"
+                class="invalid-feedback"
+              >
+                Please enter a valid email address.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Password:</label>
+            <input
+              type="password"
+              id="password"
+              formControlName="password"
+              class="form-control"
+              placeholder="Enter your password"
+              [ngClass]="{
+                'is-invalid':
+                  loginForm.get('password')?.invalid &&
+                  loginForm.get('password')?.touched
+              }"
+            />
+            <div
+              class="invalid-feedback"
+              *ngIf="
+                loginForm.get('password')?.invalid &&
+                loginForm.get('password')?.touched
+              "
+            >
+              <div
+                *ngIf="loginForm.get('password')?.hasError('required')"
+                class="invalid-feedback"
+              >
+                Password is required.
+              </div>
+              <div
+                *ngIf="loginForm.get('password')?.hasError('minlength')"
+                class="invalid-feedback"
+              >
+                Password must be at least 8 characters long.
+              </div>
+            </div>
+          </div>
+          <div class="button-wrapper text-center">
+            <button
+              type="submit"
+              class="btn btn-warning"
+              [disabled]="loginForm.invalid"
+            >
+              Login
+            </button>
+            <div class="forgot-password">
+              <a href="#" (click)="resetPassword()">Forgot password?</a>
+              <!-- Adăugăm un link pentru resetarea parolei -->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</html>

@@ -1,0 +1,96 @@
+html {
+  background-image: url("../../../assets/Background Abstract Galben Upscaled 1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#brand-img {
+  margin-left: 2vh;
+  max-width: 12vh;
+}
+
+#main {
+  margin-top: 3vh;
+  height: 100vh;
+  // display: flex;;
+  justify-content: center;
+  // align-items: center;
+}
+
+.col-md-8 {
+  padding-right: 12vh;
+  margin-bottom: 1vh;
+
+  @media (max-width: 767px) {
+    padding-right: 0;
+  }
+}
+
+.login-text {
+  padding-top: 3vh;
+  padding-right: 7vh;
+  padding-left: 7vh;
+  /* Adăugăm spațiu sub textul de bun venit */
+}
+
+@media (max-width: 767px) {
+ .login-text {
+   padding-right: 10px;
+   padding-top: 0;
+   padding-left: 0;
+  }
+}
+
+.loginContiner {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 17px;
+  max-width: 30%;
+  margin-right: 4vh;
+  padding-right: 3vh;
+  padding-bottom: 3vh;
+  padding-left: 3vh;
+
+  @media (max-width: 767px) {
+    max-width: 70%;
+    margin-right: 0;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+.loginContiner h2 {
+  padding: 2vh;
+}
+
+.loginContiner .invalid-feedback {
+  color: red;
+}
+
+.loginContiner input {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.loginContiner input:not(:placeholder-shown) {
+  font-size: 16px;
+  /* setăm aceeași dimensiune de font ca și când este activat */
+}
+
+.btn-warning {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  /* Folosește culoarea textului din parinte */
+}
+
+.forgot-password {
+  margin-top: 20px;
+  // padding-bottom: 12px;
+}

@@ -1,0 +1,103 @@
+body {
+  background-image: url("../../../assets/Background\ Abstract\ Galben\ Upscaled\ 1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#brand-img {
+  margin-left: 2vh;
+  max-width: 12vh;
+}
+
+.carousel-body {
+  height: 100vh;
+}
+
+.content-container{
+  position: relative;
+}
+
+.content {
+  // background-color: rgba(255, 255, 255, 0.7);
+  // border-radius: 17px;
+  max-width: 70%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Asigură că signup-content este la suprafață */
+}
+
+.signup-container {
+  position: relative;
+}
+
+.signup-content {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 17px;
+  max-width: 70%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Asigură că signup-content este la suprafață */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  /* Ajustează poziția butonului de înainte */
+}
+
+.carousel-control-next {
+  /* Ajustează poziția butonului de înapoi */
+}
+
+h2 {
+  font-size: 24px;
+  padding-bottom: 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.signup-content h2 {
+  padding: 2vh;
+}
+
+.signup-content .invalid-feedback {
+  color: red;
+}
+
+.signup-content input {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.signup-content input:not(:placeholder-shown) {
+  font-size: 16px;
+}
+
+.btn-warning {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.forgot-password {
+  margin-top: 20px;
+}
+
+
+#happiness-img{
+  max-width: 20vh;
+
+  @media screen and (max-width: 768px){
+    max-width: 12vh;
+  }
+}

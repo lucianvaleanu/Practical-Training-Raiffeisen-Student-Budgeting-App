@@ -1,0 +1,53 @@
+
+
+<div class="modal fade" id="addTransactionModal" tabindex="-1" aria-labelledby="addTransactionModal" aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addTransactionModalLabel">Add transaction</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="datepicker">
+                    <label class="input-label" for="datepicker">Date</label>
+                    <form class="row row-cols-sm-auto">
+                        <div class="col-12">
+                            <div class="input-group">
+                                <input id="datepicker" class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
+                                    ngbDatepicker [footerTemplate]="footerTemplate" #d="ngbDatepicker" />
+                                <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+                            </div>
+                        </div>
+                    </form>
+                    <ng-template #footerTemplate>
+                        <hr class="my-0" />
+                        <button class="btn btn-warning btn-sm m-2 float-start" (click)="model = today; d.close()">Today</button>
+                        <button class="btn btn-light btn-sm m-2 float-end" (click)="d.close()">Close</button>
+                    </ng-template>
+                </div>
+                <br />
+                <div class="typepicker">
+                    <label class="input-label" for="type">Type</label>
+                    <!--TODO: Adaugat tipurile posibile de tranzactie-->
+                    <select id="type" class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">Withdrawal</option>
+                        <option value="2">Payment</option>
+                        <option value="3">Deposit</option>
+                        <option value="4">Groceries</option>
+                      </select>
+                </div>
+                <br />
+                <div class="amount">
+                    <label class="input-label" for="amount">Amount</label>
+                    <input id="amount" type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

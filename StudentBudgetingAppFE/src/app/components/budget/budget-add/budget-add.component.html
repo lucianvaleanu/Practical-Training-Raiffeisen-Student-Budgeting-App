@@ -1,0 +1,32 @@
+<div class="modal fade" id="addBudgetModal" tabindex="-1" aria-labelledby="addBudgetModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addBudgetModalLabel">Add budget</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Category Name:</label>
+                    <input type="text" class="form-control" id="categoryName">
+                </div>
+                <div class="mb-3">
+                    <label for="frequency" class="form-label">Frequency:</label>
+                    <select class="form-select" id="frequency">
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="annual">Annual</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Amount:</label>
+                    <input type="number" class="form-control" id="amount">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

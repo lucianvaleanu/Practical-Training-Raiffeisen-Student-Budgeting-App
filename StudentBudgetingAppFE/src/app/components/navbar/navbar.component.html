@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../../../assets/Brand.png" id="brand-img" class="img-fluid" alt="Brand">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <button class="btn btn-light bi bi-cash" data-bs-toggle="modal"
+            data-bs-target="#addIncomeModal">  Add
+            Income</button>
+          <app-income-add></app-income-add>
+        </li>
+
+        <li class="nav-item">
+          <button class="btn btn-light bi bi-plus-circle-fill" data-bs-toggle="modal"
+            data-bs-target="#addTransactionModal">  Add
+            Transaction</button>
+          <app-transaction-add></app-transaction-add>
+        </li>
+
+        <li class="nav-item">
+          <button class="btn btn-light bi bi-piggy-bank-fill" data-bs-toggle="modal"
+            data-bs-target="#addBudgetModal">  Add
+            Budget</button>
+          <app-budget-add></app-budget-add>
+        </li>
+
+        <div class="dropdown">
+          <a class="btn btn-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Learn
+          </a>
+        
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://www.raiffeisen.ro/ro/persoane-fizice/in-sprijinul-tau/transforma-cheltuielile-in-economii.html">
+              Transformă cheltuielile în economii</a></li>
+            <li><a class="dropdown-item" href="https://www.raiffeisen.ro/ro/persoane-fizice/in-sprijinul-tau/tine-ti-ratele-sub-control.html">Ține-ți ratele sub control</a></li>
+          </ul>
+        </div>
+        
+
+      </ul>
+
+    </div>
+    
+  </div>
+  
+</nav>
